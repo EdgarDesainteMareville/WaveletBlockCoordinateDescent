@@ -20,7 +20,7 @@ A small demo notebook is also provided in `demo.ipynb`.
 ### Adding your own update rules
 
 To add your own update rules, you can add a function `create_my_update_list` in the `UpdateList` class in `multilevel/block.py`. The update list is the list
-$$ [(\varepsilon_{a_J}^k, \varepsilon_{d_J}^k, \ldots, \varepsilon_{d_1}^k), \quad 1 \leq k \leq K], $$
+$$[(\varepsilon_{a_J}^k, \varepsilon_{d_J}^k, \ldots, \varepsilon_{d_1}^k), \quad 1 \leq k \leq K],$$
 where $K$ is the total length of a cycle.
 
 The variables $\varepsilon_{a_J}$ and $\varepsilon_{d_j}$ are encoded as follows:
