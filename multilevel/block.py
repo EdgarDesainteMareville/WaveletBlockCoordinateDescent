@@ -260,14 +260,14 @@ class BlockCoordinateDescent():
         # Initial gradient computation
         self.update_gradient([(0, 'approx')] + [(level, 'details') for level in range(self.max_levels)], xk_wavelet)
 
-        # Compute initial metrics
-        self.compute_metrics(x_wavelet=None, x_img=x0)
-
         # Update list
         update_list = UpdateList(self.max_levels).get_list(type=update_mode)
 
         if metrics:
             start = time.process_time()
+
+        # Compute initial metrics
+        self.compute_metrics(x_wavelet=None, x_img=x0)
 
         with torch.no_grad():
             with tqdm(range(n_iter), desc=f"BCD {update_mode}") as t:
